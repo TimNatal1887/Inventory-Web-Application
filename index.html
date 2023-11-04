@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="scripts.js" defer></script>
-    <title>Document</title>
+    <title>Game Inventory App</title>
 </head>
 <section class="page-title">
     <h1>Game Inventory Application</h1>
@@ -13,37 +13,43 @@
 <section class="main">
     <form class="info submain">
         <label>
+            Game Title
+        </label>
             <input id="title-input" type="text">
-        </label>
         <label>
-            <input id="author-input" type="text">
+            Developer
         </label>
+            <input id="developer-input" type="text">
         <label>
+            Image URL
+        </label>
             <input id="image-input" type="text">
 
-        </label>
         <label>
+            Price
+        </label>
             <input id="price-input" type="text">
 
-        </label>
         <label>
+            Description
+        </label>
             <input id="description-input" type="text">
 
-        </label>
         <select name="stock" id="stock">
-            <option>--Select stock status--</option>
+            <option>  --Select stock status--  </option>
             <option value="in-stock">In Stock</option>
             <option value="out-of-stock">Out of Stock</option>
         </select>
+        <input type="submit" name="" id="submit">
     </form>
     <section class="games submain">
         <ul>
             <li>
                 <h3 id="title-output">Call of Duty: Modern warfare 3</h3>
-                <div id="author-output"></div>
+                <div id="developer-output">Infinity Ward</div>
                 <div id="image-output"></div>
-                <div id="price-output"></div>
-                <div id="description-output"></div>
+                <div id="price-output">$70.00</div>
+                <div id="description-output">An action packed first person shooter with a Campaign and Multiplayer Mode</div>
                 
             </li>
         </ul>

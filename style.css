@@ -1,0 +1,52 @@
+html,
+body{
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+.page-title{
+    padding: 10px;
+    text-align: center;
+    background-color: aqua;
+    width: auto;
+    height:auto;
+    margin-bottom: 50px;
+    border-bottom: 3px solid black;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+.info{
+    padding-bottom: 50px;
+    display: grid;
+    margin: 10px;
+}
+label{
+    margin: 5px 0px;
+}
+input{
+    width: 300px;
+}
+
+select{
+    width: 25%;
+    margin-top: 10px;
+}
+#stock{
+    width: 20%;
+    margin-bottom: 10px;
+}
+ul{
+    display: grid;
+}
+li{
+    display: grid;
+    list-style-type: none;
+
+}
+
+
