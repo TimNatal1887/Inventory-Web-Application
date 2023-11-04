@@ -6,9 +6,10 @@ body{
     width: 100%;
 }
 .page-title{
+    color: gold;
     padding: 10px;
     text-align: center;
-    background-color: aqua;
+    background-color: navy;
     width: auto;
     height:auto;
     margin-bottom: 50px;
@@ -26,6 +27,7 @@ body{
     margin: 10px;
 }
 label{
+    font-weight: bold;
     margin: 5px 0px;
 }
 input{
@@ -47,7 +49,28 @@ li{
     list-style-type: none;
 
 }
+img{
+    height: auto;
+    width: 75%;
+}
+h3,
+h4{
+    border-bottom: 1px solid gray;
+    font-size: 22px;
+}
+#title-output{
+    margin-top: 17px;
+    margin-bottom: 10pxpx;
+}
 
+#developer-output{
+    font-style: italic;
+    padding: 10px;
+}
+
+#price-output{
+    margin-bottom: 10px;
+}
 
 @media (max-width:720px){
     .main{

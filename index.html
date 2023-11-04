@@ -12,6 +12,7 @@
 </section>
 <section class="main">
     <form class="info submain">
+        <h3>Add a game to your Library</h3>
         <label>
             Game Title
         </label>
@@ -35,7 +36,7 @@
         </label>
             <input id="description-input" type="text">
 
-        <select required name="stock" id="stock" value="">
+        <select required name="stock-type" id="stock-select" value="">
             <option value="" selected disabled>  --Select stock status--  </option>
             <option value="in-stock">In Stock</option>
             <option value="out-of-stock">Out of Stock</option>
@@ -45,11 +46,16 @@
     <section class="games submain">
         <ul>
             <li>
-                <h3 id="title-output">Call of Duty: Modern warfare 3</h3>
-                <div id="developer-output">Infinity Ward</div>
-                <div id="image-output"></div>
-                <div id="price-output">$70.00</div>
-                <div id="description-output">An action packed first person shooter with a Campaign and Multiplayer Mode</div>
+                <div id="image-output">
+                    <h3 id="title-output">Call of Duty: Modern Warfare 3</h3>
+                    <img src="https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/hero/mwiii/MWIII-REVEAL-FULL-TOUT.jpg" alt="Call of Duty MW3 Cover">
+                </div>
+                <div id="developer-output">Developed by: Infinity Ward</div>
+                <div id="price-output">Price: $70.00</div>
+                <div id="description-output"> - An action packed first person shooter with a Campaign and Multiplayer Mode</div>
+                <div id="stock-value">
+                    <button>In Stock</button>
+                </div>
                 
             </li>
         </ul>
