@@ -15,11 +15,11 @@
         <label>
             Game Title
         </label>
-            <input id="title-input" type="text">
+            <input id="title-input" type="text" required>
         <label>
             Developer
         </label>
-            <input id="developer-input" type="text">
+            <input id="developer-input" type="text" required>
         <label>
             Image URL
         </label>
@@ -28,15 +28,15 @@
         <label>
             Price
         </label>
-            <input id="price-input" type="text">
+            <input id="price-input" type="text" required>
 
         <label>
             Description
         </label>
             <input id="description-input" type="text">
 
-        <select name="stock" id="stock">
-            <option>  --Select stock status--  </option>
+        <select required name="stock" id="stock" value="">
+            <option value="" selected disabled>  --Select stock status--  </option>
             <option value="in-stock">In Stock</option>
             <option value="out-of-stock">Out of Stock</option>
         </select>

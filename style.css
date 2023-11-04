@@ -33,11 +33,10 @@ input{
 }
 
 select{
-    width: 25%;
     margin-top: 10px;
 }
 #stock{
-    width: 20%;
+    width: 150px;
     margin-bottom: 10px;
 }
 ul{
@@ -50,3 +49,9 @@ li{
 }
 
 
+@media (max-width:720px){
+    .main{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
