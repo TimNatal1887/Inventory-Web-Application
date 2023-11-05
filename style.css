@@ -25,7 +25,7 @@ body{
     
 }
 #form-section{
-    width: 200px;
+    width: 400px;
 }
 .games{
     width: 50%;
@@ -46,11 +46,8 @@ input{
 }
 
 select{
+    width: 160px;
     margin-top: 10px;
-}
-#stock{
-    width: 150px;
-    margin-bottom: 10px;
 }
 
 li{
@@ -89,7 +86,7 @@ h4{
     width: 100px;
 }
 button{
-    display: block;
+    display: inline;
     margin: 10px 0px
 }
 .in-stock{

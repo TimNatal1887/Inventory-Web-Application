@@ -1,6 +1,8 @@
 const form = document.querySelector("form");
-const games = document.querySelector(".game-list")
+const gameSection = document.querySelector(".game-list")
 const resetButton = document.querySelector("#reset-button")
+const gameList = document.querySelectorAll(".game")
+const submitButton = document.querySelector("#submit")
 
 resetButton.addEventListener("click",()=>{
     form.reset()
@@ -9,11 +11,11 @@ resetButton.addEventListener("click",()=>{
     
 
 form.addEventListener("submit",(event) =>{
+    event.preventDefault()
     const error = document.querySelector(".error")
     if(error){
         error.remove()
     }
-    event.preventDefault()
     const {title,dev,image,price,description,stock} = event.target
     const info = [title,dev,image,price,description,stock]
 
@@ -40,7 +42,7 @@ function createGameTemplate(title,dev,image,price,description,stock){
     <button class="stock-button ${stock}">${stockText}</button>
     <button id="remove">Remove</button>
     </div>`
-    games.append(newGame)
+    gameSection.append(newGame)
     
     const removeButton = newGame.querySelector("#remove")
     removeButton.addEventListener("click",() =>{
@@ -96,3 +98,23 @@ function stockCheck(stock){
     }
 }
 
+for(let game of gameList){
+    const stockButton = game.querySelector(".stock-button"); 
+    const removeButton = game.querySelector("#remove")
+    removeButton.addEventListener("click",() =>{
+        game.remove()
+    })
+
+    stockButton.addEventListener("click",() =>{
+        console.log("test")
+        if(stockButton.classList.contains("out-of-stock")){
+            stockButton.textContent = "In Stock"
+            stockButton.classList.add("in-stock")
+            stockButton.classList.remove("out-of-stock")
+        }else{
+            stockButton.textContent = "Out of Stock"
+            stockButton.classList.add("out-of-stock")
+            stockButton.classList.remove("in-stock")
+        }
+    })
+}
