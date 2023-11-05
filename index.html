@@ -15,28 +15,36 @@
         <form class="info submain" novalidate>
             <h3>Add a game to your Library</h3>
             <label>
-                Game Title
-            </label>
+                <div>
+                    Game Title
+                </div>
                 <input name="title" id="title" type="text" required>
-            <label>
-                Developer
             </label>
+            <label>
+                <div>
+                  Developer
+                </div>
                 <input name="dev" id="developer" type="text" required>
-            <label>
-                Image URL
             </label>
+            <label>
+                <div>
+                    Image URL
+                </div>
                 <input name="image" id="image" type="text" required>
+            </label>
     
             <label>
-                Price
-            </label>
+                <div>
+                    Price
+                </div>
                 <input name="price" id="price" type="text" required>
-    
-            <label>
-                Description
             </label>
+            <label>
+                <div>
+                    Description
+                </div>
                 <input name="description" id="description" type="text" required>
-    
+            </label>
             <select required name="stock" id="stock-select">
                 <option value="" selected>  --Select stock status--  </option>
                 <option value="in-stock">In Stock</option>
@@ -61,6 +69,34 @@
                 <div id="description-output"> <strong><u>Game Description:</u></strong> <em>An action packed first person shooter with a Campaign and Multiplayer Mode</em></div>
                 <div id="stock-value">
                     <button class="stock-button out-of-stock">Out of Stock</button>
+                    <button id="remove">Remove</button>
+                </div>
+                
+            </li>
+            <li class="game">
+                <div id="list-header">
+                    <h3 id="title-output">Phasmophobia</h3>
+                    <img src="data:image/jpeg;base64,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" alt="Phasmophobia Cover">
+                </div>
+                <div id="developer-output">Developed by: Kinetic Games</div>
+                <div id="price-output">Price: $13.99</div>
+                <div id="description-output"> <strong><u>Game Description:</u></strong> <em>Phasmophobia is a paranormal horror game developed and published by British indie game studio Kinetic Games. It is based primarily on the popular hobby of ghost hunting. </em></div>
+                <div id="stock-value">
+                    <button class="stock-button out-of-stock">Out of Stock</button>
+                    <button id="remove">Remove</button>
+                </div>
+                
+            </li>
+            <li class="game">
+                <div id="list-header">
+                    <h3 id="title-output">The Binding of Isaac</h3>
+                    <img src="https://assets-prd.ignimgs.com/2021/10/13/binding-of-isaac-repentance-button-fin-1634150728653.jpg?width=300&crop=1%3A1%2Csmart&auto=webp&dpr=2" alt="Isaac Cover">
+                </div>
+                <div id="developer-output">Developed by: Nicalis</div>
+                <div id="price-output">Price: $60.00</div>
+                <div id="description-output"> <strong><u>Game Description:</u></strong> <em>The Binding of Isaac is a roguelike video game designed by independent developers Edmund McMillen and Florian Himsl.</em></div>
+                <div id="stock-value">
+                    <button class="stock-button in-stock">In Stock</button>
                     <button id="remove">Remove</button>
                 </div>
                 

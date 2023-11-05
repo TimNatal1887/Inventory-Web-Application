@@ -2,7 +2,6 @@ const form = document.querySelector("form");
 const gameSection = document.querySelector(".game-list")
 const resetButton = document.querySelector("#reset-button")
 const gameList = document.querySelectorAll(".game")
-const submitButton = document.querySelector("#submit")
 
 resetButton.addEventListener("click",()=>{
     form.reset()
