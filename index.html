@@ -11,40 +11,42 @@
     <h1>Game Inventory Application</h1>
 </section>
 <section class="main">
-    <form class="info submain">
-        <h3>Add a game to your Library</h3>
-        <label>
-            Game Title
-        </label>
-            <input name="title" id="title" type="text" required>
-        <label>
-            Developer
-        </label>
-            <input name="dev" id="developer" type="text" required>
-        <label>
-            Image URL
-        </label>
-            <input name="image" id="image" type="text">
-
-        <label>
-            Price
-        </label>
-            <input name="price" id="price" type="text" required>
-
-        <label>
-            Description
-        </label>
-            <input name="description" id="description" type="text">
-
-        <select required name="stock" id="stock-select" value="">
-            <option value="" selected disabled>  --Select stock status--  </option>
-            <option value="in-stock">In Stock</option>
-            <option value="out-of-stock">Out of Stock</option>
-        </select>
-        <input type="submit" name="" id="submit">
-    </form>
+    <section id="form-section">
+        <form class="info submain">
+            <h3>Add a game to your Library</h3>
+            <label>
+                Game Title
+            </label>
+                <input name="title" id="title" type="text" required>
+            <label>
+                Developer
+            </label>
+                <input name="dev" id="developer" type="text" required>
+            <label>
+                Image URL
+            </label>
+                <input name="image" id="image" type="text" required>
+    
+            <label>
+                Price
+            </label>
+                <input name="price" id="price" type="text" required>
+    
+            <label>
+                Description
+            </label>
+                <input name="description" id="description" type="text" required>
+    
+            <select required name="stock" id="stock-select">
+                <option value="" selected disabled>  --Select stock status--  </option>
+                <option value="in-stock">In Stock</option>
+                <option value="out-of-stock">Out of Stock</option>
+            </select>
+            <input type="submit" name="submit" id="submit">
+        </form>
+    </section>
     <section class="games submain">
-        <ul>
+        <ul class="game-list">
             <li class="game">
                 <div id="list-header">
                     <h3 id="title-output">Call of Duty: Modern Warfare 3</h3>
