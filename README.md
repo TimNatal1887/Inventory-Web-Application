@@ -15,3 +15,5 @@ In this web applicaiton, a user is able to provide given details about a video g
 
 - A user can remove a game from their library using the remove button.
 
+- A user can reset the form using the reset button.
+

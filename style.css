@@ -77,12 +77,13 @@ h4{
     margin-bottom: 10px;
 }
 #submit{
+    font-weight: bold;
+    border: 1px solid black;
+    background-color: rgb(124, 219, 250);
     width: 100px;
     margin-top: 10px;
-    display: inline;
 }
 #reset-button{
-    display: inline;
     width: 100px;
 }
 button{
