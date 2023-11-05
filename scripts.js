@@ -4,6 +4,10 @@ const resetButton = document.querySelector("#reset-button")
 const gameList = document.querySelectorAll(".game")
 
 resetButton.addEventListener("click",()=>{
+    const error = document.querySelector(".error")
+    if(error){
+        error.remove()
+    }
     form.reset()
 })
 
