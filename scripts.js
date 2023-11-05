@@ -42,6 +42,7 @@ function createGameTemplate(title,dev,image,price,description,stock){
     <button id="remove">Remove</button>
     </div>`
     gameSection.append(newGame)
+    gameList[0].before(newGame)
     
     const removeButton = newGame.querySelector("#remove")
     removeButton.addEventListener("click",() =>{
