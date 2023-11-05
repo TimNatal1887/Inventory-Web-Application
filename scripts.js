@@ -1,37 +1,65 @@
 const form = document.querySelector("form");
 const games = document.querySelector(".game-list")
-console.log(games)
+const resetButton = document.querySelector("#reset-button")
+
+resetButton.addEventListener("click",()=>{
+    form.reset()
+})
+
+    
 
 form.addEventListener("submit",(event) =>{
-    event.preventDefault();
+    const error = document.querySelector(".error")
+    if(error){
+        error.remove()
+    }
+    event.preventDefault()
+    const {title,dev,image,price,description,stock} = event.target
+    const info = [title,dev,image,price,description,stock]
 
-    // if(elementCheck(info)){
-    //     elementCheck(info)
-    // }else{
-        const {title,dev,image,price,description,stock} = event.target
+    if(form.checkValidity()){
         createGameTemplate(title.value,dev.value,image.value,price.value,description.value,stock.value)
-    // }
+        form.reset()
+    }else{
+        elementCheck(info)
+    }
 })
 
 
 function createGameTemplate(title,dev,image,price,description,stock){
     const newGame = document.createElement("li")
+    const stockText = stockCheck(stock)
     newGame.classList.add("game")
     newGame.innerHTML = `<div id="list-header">
     <h3 id="title-output">${title}</h3>
     <img src="${image}">
     <div id="developer-output">Developed by: ${dev}</div>
     <div id="price-output">Price:${price}</div>
-    <div id="description-output">${description}</div>
+    <div id="description-output"> <strong><u>Game Description:</u></strong> <em>${description}</em></div>
     <div id="stock-value">
-    <button class="${stock}"></button>
+    <button class="stock-button ${stock}">${stockText}</button>
     <button id="remove">Remove</button>
     </div>`
     games.append(newGame)
     
-    const button = newGame.querySelector("#remove")
-    button.addEventListener("click",() =>{
+    const removeButton = newGame.querySelector("#remove")
+    removeButton.addEventListener("click",() =>{
         newGame.remove()
+    })
+
+    const stockButton = newGame.querySelector(".stock-button");
+
+    stockButton.addEventListener("click",() =>{
+        console.log("test")
+        if(stockButton.classList.contains("out-of-stock")){
+            stockButton.textContent = "In Stock"
+            stockButton.classList.add("in-stock")
+            stockButton.classList.remove("out-of-stock")
+        }else{
+            stockButton.textContent = "Out of Stock"
+            stockButton.classList.add("out-of-stock")
+            stockButton.classList.remove("in-stock")
+        }
     })
 
 
@@ -39,18 +67,32 @@ function createGameTemplate(title,dev,image,price,description,stock){
     
 }
 
-function elementCheck(elements){
-    if(!elements.every(element=> element.value)){
-        const errorBox = document.createElement("ul");
-        elements.forEach(element=>{
-            if(!element.value){
-                const newLi = document.createElement("li")
-                newLi.textContent = "Error, field must not be empty!"
-                errorBox.append("newLi")
-            }
-        })
-        return true
+function elementCheck(elements) {
+    const errorBox = document.createElement("ul");
+    errorBox.classList.add("error");
+
+    elements.forEach(element => {
+        const name = element.name.charAt(0).toUpperCase() + element.name.slice(1)
+        if (!element.value) {
+            const newLi = document.createElement("li");
+            newLi.textContent = `Error, ${name} must not be empty!`;
+            errorBox.append(newLi);
+        }
+    });
+
+    if (errorBox.children.length > 0) {
+        form.append(errorBox);
+        return true;
     }
-    return false
+
+    return false;
+}
+
+function stockCheck(stock){
+    if(stock==="in-stock"){
+        return "In Stock"
+    }else{
+        return "Out of Stock"
+    }
 }
 

@@ -1,5 +1,6 @@
 html,
 body{
+    background-color: wheat;
     padding: 0px;
     margin: 0px;
     height: 100%;
@@ -78,7 +79,15 @@ h4{
 #price-output{
     margin-bottom: 10px;
 }
-
+#submit{
+    width: 100px;
+    margin-top: 10px;
+    display: inline;
+}
+#reset-button{
+    display: inline;
+    width: 100px;
+}
 button{
     display: block;
     margin: 10px 0px
@@ -96,6 +105,17 @@ button{
 #remove{
     background-color: red;
     color: white;
+}
+
+.error{
+    padding: 10px 0px 10px 30px;
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+   
+}
+.error li{
+    list-style: disc;
 }
 @media (max-width:720px){
     .main{

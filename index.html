@@ -12,7 +12,7 @@
 </section>
 <section class="main">
     <section id="form-section">
-        <form class="info submain">
+        <form class="info submain" novalidate>
             <h3>Add a game to your Library</h3>
             <label>
                 Game Title
@@ -30,7 +30,7 @@
             <label>
                 Price
             </label>
-                <input name="price" id="price" type="text" required>
+                <input name="price" id="price" type="number" required>
     
             <label>
                 Description
@@ -38,11 +38,12 @@
                 <input name="description" id="description" type="text" required>
     
             <select required name="stock" id="stock-select">
-                <option value="" selected disabled>  --Select stock status--  </option>
+                <option value="" selected>  --Select stock status--  </option>
                 <option value="in-stock">In Stock</option>
                 <option value="out-of-stock">Out of Stock</option>
             </select>
             <input type="submit" name="submit" id="submit">
+            <button id="reset-button">Reset</button>
         </form>
     </section>
     <section class="games submain">
@@ -54,9 +55,9 @@
                 </div>
                 <div id="developer-output">Developed by: Infinity Ward</div>
                 <div id="price-output">Price: $70.00</div>
-                <div id="description-output"> - An action packed first person shooter with a Campaign and Multiplayer Mode</div>
+                <div id="description-output"> <strong><u>Game Description:</u></strong> <em>An action packed first person shooter with a Campaign and Multiplayer Mode</em></div>
                 <div id="stock-value">
-                    <button class="out-of-stock">Out of Stock</button>
+                    <button class="stock-button out-of-stock">Out of Stock</button>
                     <button id="remove">Remove</button>
                 </div>
                 
