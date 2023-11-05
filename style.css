@@ -72,6 +72,24 @@ h4{
     margin-bottom: 10px;
 }
 
+button{
+    display: block;
+    margin: 10px 0px
+}
+.in-stock{
+    color: green;
+    font-weight: bold;
+}
+
+.out-of-stock{
+     color: red;
+     font-weight: bold;
+}
+
+#remove{
+    background-color: red;
+    color: white;
+}
 @media (max-width:720px){
     .main{
         display: grid;
