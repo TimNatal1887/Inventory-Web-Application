@@ -25,7 +25,9 @@ body{
     
 }
 #form-section{
-    width: 500px;
+    height: 500px;
+    border: dotted;
+    width: 700px;
 }
 .games{
     width: 70%
@@ -66,7 +68,7 @@ img{
 }
 h3,
 h4{
-    border-bottom: 1px solid gray;
+    border-bottom: 2px solid gray;
     font-size: 22px;
 }
 #title-output{

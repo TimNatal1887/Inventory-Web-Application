@@ -34,6 +34,11 @@ form.addEventListener("submit",(event) =>{
 function createGameTemplate(title,dev,image,price,description,stock){
     const newGame = document.createElement("li")
     const stockText = stockCheck(stock)
+    let createMessage = document.querySelector(".create-message");
+    if(createMessage){
+        createMessage.remove()
+    }
+
     newGame.classList.add("game")
     newGame.innerHTML = `<div id="list-header">
     <h3 id="title-output">${title}</h3>
