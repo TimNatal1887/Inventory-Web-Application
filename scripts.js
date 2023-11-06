@@ -56,7 +56,6 @@ function createGameTemplate(title,dev,image,price,description,stock){
     const stockButton = newGame.querySelector(".stock-button");
 
     stockButton.addEventListener("click",() =>{
-        console.log("test")
         if(stockButton.classList.contains("out-of-stock")){
             stockButton.textContent = "In Stock"
             stockButton.classList.add("in-stock")
