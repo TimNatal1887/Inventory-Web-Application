@@ -109,7 +109,6 @@ for(let game of gameList){
     })
 
     stockButton.addEventListener("click",() =>{
-        console.log("test")
         if(stockButton.classList.contains("out-of-stock")){
             stockButton.textContent = "In Stock"
             stockButton.classList.add("in-stock")
